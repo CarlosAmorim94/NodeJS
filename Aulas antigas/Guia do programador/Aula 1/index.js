@@ -2,13 +2,13 @@ const express = require('express')
 const app = express()
 
 // criar rota principal //req = requisição, res = resposta
-app.get('/index.html' , (req, res) => {
-    res.sendFile(__dirname + "/html/index.html") //__dirname = local absoluto onde a aplicação está rodando
+app.get('/' , (req, res) => {
+    res.send('Ola mundo! Seja bem vindo ao meu app!')
 })
 
 //Criar página "Sobre" = http://localhost:8081/sobre
-app.get('/internacional.html', (req, res)=>{
-    res.sendFile(__dirname + "/html/internacional.html")
+app.get('/sobre', (req, res)=>{
+    res.send('Minha pagina SOBRE')
 })
 
 //Criar página "Blog" = http://localhost:8081/blog
